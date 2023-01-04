@@ -1,5 +1,25 @@
+/* - All items are centered on the page (horizontally, not vertically). 
+- The title is centered on the page. 
+- There is 32px between the title and the 'items.'
+- There is 52px between each item. 
+- The items are arranged horizontally on the page. 
+- The items are only 200px wide and the text wraps. - The item text is centered. */
+
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 52px;
 }
 
 img {
@@ -10,6 +30,9 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
 }
 
 /* do not edit this footer */
