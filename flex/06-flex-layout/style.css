@@ -1,10 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* - The header is at the top of the page, the footer is at the bottom, and they stay in place if you resize your screen. 
+- The header and footer have padding. 
+- The links in the header and footer are pushed to either side. 
+- There is space between the links in the header and footer. 
+- The footer has a light gray background (`#eeeeee`). 
+- The logo, input and buttons are centered in the screen. 
+- The buttons have an appropriate amount of padding. 
+- There is space between the logo, input and buttons.
+
+- You may want to search something like `CSS remove list bullets`. We've done this for you in previous examples, but not here. Yay learning.
+- Finding out how to style links in CSS might help you get rid of that pesky underline decoration... 
+- We've added `height: 100vh` to the `body`... this makes the body exactly the same height as the viewport. 
+- To stick the footer to the bottom you will need to use flex and change the direction to column. */
+
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #eeeeee;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 15px;
 }
 
 img {
@@ -16,6 +58,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 5px 10px;
 }
 
 input {
@@ -24,4 +67,18 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
